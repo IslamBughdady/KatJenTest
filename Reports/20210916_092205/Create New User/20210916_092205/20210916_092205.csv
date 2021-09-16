@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Create New User,,,,2021-09-16 09:22:19,2021-09-16 09:22:27,7.219s,PASSED
+,,,,,,,
+Test Cases/Users/Create New User,,,,2021-09-16 09:22:20,2021-09-16 09:22:27,6.334s,PASSED
+"response = sendRequest(findTestObject(""Users/Create New User""))",,,,2021-09-16 09:22:21,2021-09-16 09:22:26,4.872s,PASSED
+"verifyResponseStatusCode(response, 201)",,,,2021-09-16 09:22:26,2021-09-16 09:22:26,0.127s,PASSED
+jsonResponseText = response.getResponseText(),,,,2021-09-16 09:22:26,2021-09-16 09:22:26,0.029s,PASSED
+println(jsonResponseText),,,,2021-09-16 09:22:26,2021-09-16 09:22:26,0.007s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,2021-09-16 09:22:26,2021-09-16 09:22:27,0.030s,PASSED
+result = slurper.parseText(jsonResponseText),,,,2021-09-16 09:22:27,2021-09-16 09:22:27,0.030s,PASSED
+"assert name == ""Bughdady""",,,,2021-09-16 09:22:27,2021-09-16 09:22:27,0.032s,PASSED
+"assert job == ""Tester""",,,,2021-09-16 09:22:27,2021-09-16 09:22:27,0.007s,PASSED
